@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <h2>Task and Notes Manager</h2>
+    <div id="form">
+        <label for="taskForm" id="addTask">Task Details</label>
+            <form method="post" action="/" id="taskForm">
+            <table>
+            <!--Title-->
+            <tr>
+                <td class="formLabel"><label for="taskTitle" >Title:</label></td>
+                <td><input type="text" id="taskTitle" class="textIn" /></td>
+                
+            </tr>
+            <tr>
+                <!--Description-->
+                <td class="formLabel"><label for="desc" >Description:</label></td>
+                <td><input type="text" id="desc" class="textIn"></td>
+            </tr>
+            <tr>
+                <!--Due Date-->
+                <td class="formLabel"><label for="dueDate" >Due Date:</label></td>
+                <td><input type="date" id="dueDate" class="textIn"></td>
+            </tr>
+            <tr>
+                <!--Status-->
+                <td class="formLabel"><label for="status" >Status:</label></td>
+                <td><input type="checkbox" id="status"></td>
+            </tr>
+            <tr>
+                <!--Priority-->
+                <td class="formLabel"><label for="priority" >Priority:</label></td>
+                <td><input type="radio" name="priority" value="High" id="high">
+                <label for="high">High</label>
+                <input type="radio" name="priority" value="Medium" id="medium" checked="checked">
+                <label for="medium">Medium</label>
+                <input type="radio" name="priority" value="Low" id="low">
+                <label for="low">Low</label></td>
+            </tr>
+            </table>
+                <input type="button" id="addNotes" value="Add Notes ?" onclick="genNotes()">
+            <input type="button" value="Submit Task" id="submit" onclick="addTask()">
+        </form>
+    </div>
+    <div id="showTasks">
+        <table id="listTasks">
+            <th>Title</th>
+            <th>Description</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Priority</th>
+            <th>Buttons</th>
+        </table>
+    </div>
+    <!--to set the default value of the date field-->
+    <script >
+        let d=document.getElementById("dueDate");
+        let curr=new Date();
+        curr.setDate(curr.getDate()+1);
+        let nextDate;
+        if((curr.getMonth()+"").length==1)
+            nextDate=curr.getFullYear()+"-"+"0"+(curr.getMonth()+1)+"-"+curr.getDate();
+        else
+            nextDate=curr.getFullYear()+"-"+0+(curr.getMonth()+1)+"-"+curr.getDate();
+        d.value=nextDate;
+    </script>
+
+</body>
+</html>

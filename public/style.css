@@ -1,0 +1,69 @@
+h2{
+    text-align: center;
+    font-family: cursive;
+}
+table{
+    border-spacing: 15px 15px;
+}
+/*add notes button*/
+#addNotes{
+    display: block;
+    margin-left: 170px;
+    height: 25px;
+    width: 100px;
+}
+/*Submit button*/
+#submit{
+    margin-top: 20px;
+    height: 25px;
+    width: 100px;
+}
+/*labels used in the form*/
+.formLabel{
+    width: 150px;
+    border-style: ridge;
+    border-width: medium;
+    border-radius: 25px;
+}
+/*checkbox showing status*/
+#status{
+    width: 50px;
+    height: 15px;
+}
+/*label over the form*/
+#addTask{
+    margin-left: 370px;
+    font-family: cursive;
+    font-size: large;
+    font-weight: bold;
+}
+.textIn{
+    width: 250px;
+    border-style: ridge;
+    border-width: medium;
+    border-radius: 25px;
+}
+#notes{
+    height: 15px;
+    border-width:thin;
+    border-style: ridge;
+}
+#taskForm{
+    border-style:solid;
+    border-width: thin;
+    width: 450px;
+    height: 240px;
+    margin-left: 400px;
+    margin-right: 20px;
+    text-align: center;
+}
+#form{
+    display: flex;
+    flex-wrap: wrap;
+}
+#listTasks{
+    border-style: solid;
+    margin-top: 50px;
+    width: 1200px;
+    margin-left: 30px;
+}
